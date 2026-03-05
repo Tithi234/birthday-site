@@ -1,1 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
 
+<title>Meme Department</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Meme Personality 😂</h1>
+
+<p>✔ CSK fan</p>
+<p>✔ Dhoni emotional supporter</p>
+<p>✔ Maithali energy</p>
+<p>✔ Political debates at 2 AM</p>
+<p>✔ Jhol Momos specialist</p>
+
+<br>
+
+<p id="momoCount"><b>Jhol Momos eaten this year:</b> 0</p>
+
+<button onclick="eatMomo()" class="button">
+Eat Jhol Momo 🍜
+</button>
+
+<br><br>
+
+<a href="shift.html" class="button">Plot Twist →</a>
+
+</div>
+
+<script>
+
+let momo = 0;
+
+function eatMomo(){
+
+momo++;
+
+document.getElementById("momoCount").innerHTML =
+"<b>Jhol Momos eaten this year:</b> " + momo;
+
+}
+
+</script>
+
+</body>
+</html>
