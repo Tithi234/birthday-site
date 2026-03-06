@@ -108,4 +108,37 @@ animation:float 10s linear infinite;
 0%{transform:translateY(0);}
 100%{transform:translateY(-120vh);}
 
+} 
+.notification{
+
+position:fixed;
+
+top:20px;
+
+right:20px;
+
+background:#111;
+
+color:white;
+
+padding:15px 20px;
+
+border-radius:12px;
+
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+
+font-size:14px;
+
+z-index:2000;
+
+animation:slideIn 0.5s ease;
+
+}
+
+@keyframes slideIn{
+
+from{transform:translateX(120%);opacity:0;}
+
+to{transform:translateX(0);opacity:1;}
+
 }
