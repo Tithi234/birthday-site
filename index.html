@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html>
 
@@ -37,6 +38,8 @@ display:none;
 
 <body>
 
+<!-- Loading Screen -->
+
 <div id="loadingScreen">
 
 <p>Initializing Nachiketa v19...</p>
@@ -47,6 +50,8 @@ display:none;
 
 </div>
 
+
+<!-- Main Website -->
 
 <div class="container hidden" id="mainContent">
 
@@ -65,7 +70,7 @@ display:none;
 
 <script>
 
-/* loading screen */
+/* Loading Screen */
 
 setTimeout(function(){
 
@@ -75,7 +80,7 @@ document.getElementById("mainContent").classList.remove("hidden");
 },3500);
 
 
-/* countdown */
+/* Countdown */
 
 const birthday = new Date("March 27, 2025 00:00:00").getTime();
 
@@ -94,8 +99,48 @@ days+"d "+hours+"h "+minutes+"m "+seconds+"s ";
 
 },1000);
 
+
+/* Random Notification System */
+
+function showNotification(){
+
+const messages=[
+
+"Breaking News 🚨 Nachiketa started another political debate",
+
+"CSK fan detected. Dhoni energy rising 🏏",
+
+"Warning ⚠ Jhol momo consumption increasing",
+
+"Alert 🚨 Meme spam incoming at 2 AM",
+
+"Political lecture loading... please wait"
+
+];
+
+const msg=messages[Math.floor(Math.random()*messages.length)];
+
+const notification=document.createElement("div");
+
+notification.className="notification";
+
+notification.innerText=msg;
+
+document.body.appendChild(notification);
+
+setTimeout(()=>{
+
+notification.remove();
+
+},4000);
+
+}
+
+setTimeout(showNotification,5000);
+
 </script>
 
 </body>
 
 </html>
+```
