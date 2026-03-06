@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
 <title>Happy Birthday Nachiketa 🎂</title>
@@ -11,6 +12,18 @@
 </head>
 
 <body>
+
+<!-- balloons -->
+
+<div class="balloons">
+
+<span>🎈</span>
+<span>🎈</span>
+<span>🎈</span>
+<span>🎈</span>
+<span>🎈</span>
+
+</div>
 
 <div class="container">
 
@@ -46,7 +59,65 @@ Buy Him Coffee ☕
 
 </a>
 
+<br><br>
+
+<button onclick="showMeme()" class="button">
+
+Random Meme 😂
+
+</button>
+
 </div>
 
+<!-- confetti script -->
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<script>
+
+/* confetti explosion */
+
+setTimeout(()=>{
+
+confetti({
+
+particleCount:200,
+
+spread:100,
+
+origin:{y:0.6}
+
+});
+
+},800);
+
+
+/* meme popup */
+
+function showMeme(){
+
+const memes = [
+
+"CSK losing again 😭",
+
+"Bro explaining politics for 45 minutes",
+
+"Jhol momo supremacy 🍜",
+
+"Dhoni will fix everything 🙏",
+
+"Average Delhi political debate moment"
+
+];
+
+const random = memes[Math.floor(Math.random()*memes.length)];
+
+alert(random);
+
+}
+
+</script>
+
 </body>
+
 </html>
